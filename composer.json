@@ -7,6 +7,8 @@
         "php": ">=7.2.5",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "php-pm/httpkernel-adapter": "^2.0",
+        "php-pm/php-pm": "^2.2",
         "symfony/console": "5.2.*",
         "symfony/dotenv": "5.2.*",
         "symfony/flex": "^1.3.1",
@@ -23,7 +25,8 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "App\\": "src/",
+            "PHPPM\\Runtime\\": "runtime/src/"
         }
     },
     "autoload-dev": {
@@ -55,6 +58,15 @@
         "symfony": {
             "allow-contrib": false,
             "require": "5.2.*"
+        },
+        "runtime": {
+            "class": "PHPPM\\Runtime\\SymfonyRuntime"
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "runtime"
+        }
+    ]
 }

@@ -1,0 +1,19 @@
+{
+    "name": "php-pm/runtime",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nyholm",
+            "email": "tobias.nyholm@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/runtime": "5.x-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "PHPPM\\Runtime\\": "src/"
+        }
+    }
+}
